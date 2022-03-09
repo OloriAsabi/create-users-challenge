@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-header h1{
+    font-size: 1.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-header h3{
+    padding: 20px;
+    border-radius: 20px;
+    color: #000;
+    background-color: var(--secondary-color);
+    font-size: 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.create-text {
+    color: #000;
+    text-decoration: none !important;
+    font-size: 1.3rem;
+    padding: 40px;
+    cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.create-icon{
+    margin: 10px;
 }
+.link{
+    text-decoration: none;
+}
+.form-div{
+    width: 100% !important;
+    height: 50vh !important;
+    border-radius: 20px;
+}
+.form{
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.form-group{
+line-height: 3;
+}
+.form-label{
+ font-size: 1.2rem;   
+ font-weight: 500;
+}
+.role{
+    display: block;
+}
+.select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+@media screen and (max-width: 300px) {
+    .form{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .form-div{
+        width: 80% !important;
+    }
+}
+.table-box{
+    font-size: 1.1em;
+    color: var(--gray-color);
+    font-weight: 200;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.tr{
+    padding: 10px;
+    margin: 10px;
+}
+.name{
+    text-transform: capitalize; 
+    font-weight: 800; 
+}
+.email{
+    font-weight: 800;
+    text-transform: lowercase;
+}
+.actions{
+    border: none;
+    font-size: 20px;   
+}
+.user-role{
+    text-transform: capitalize;
+    font-weight: 800;
+}
+@media screen and (max-width: 500px){
+    .name, .email, .user-role{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+
 }
