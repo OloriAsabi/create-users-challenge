@@ -21,16 +21,7 @@ const [user, setUser ] = useState({
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
-
-  useEffect(() => {
-    getUser();
-  }, []);
-
-  const onSubmit = e => {
-    e.preventDefault();
-    updateUser(id)
-  };
- 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getUser = () => {
         console.log('Params id: ', id);
         //api 
@@ -45,6 +36,17 @@ const [user, setUser ] = useState({
   
     };
     
+
+  useEffect(() => {
+    getUser();
+  }, [getUser]);
+
+  const onSubmit = e => {
+    e.preventDefault();
+    updateUser(id)
+  };
+ 
+  
       const updateUser = (id) => {
         const database = getDatabase(app);
         const userUpdate = {};
