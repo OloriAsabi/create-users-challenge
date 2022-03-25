@@ -40,7 +40,7 @@ const [user, setUser ] = useState({
 
   useEffect(() => {
     getUser();
-  }, [getUser]);
+  }, []);
 
   const onSubmit = e => {
     e.preventDefault();
