@@ -20,7 +20,6 @@ const [user, setUser ] = useState({
   ]
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
-    console.log(user)
   };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const getUser = () => {
@@ -78,7 +77,7 @@ const [user, setUser ] = useState({
               className="form-control form-control-lg"
               placeholder="Enter Your Name"
               name="name"
-              onChange={() => onInputChange}
+              onChange={onInputChange}
               value={user.name}
             />
           </div>
@@ -89,7 +88,7 @@ const [user, setUser ] = useState({
               className="form-control form-control-lg"
               placeholder="Enter Your E-mail Address"
               name="email"
-              onChange={() => onInputChange}
+              onChange={onInputChange}
               value={user.email}
             />
           </div>
